@@ -1,0 +1,39 @@
+ALGORITHM algorithm_name
+VAR
+    sentence:STRING;
+    sentenceLength, wordcount, vowelcount: INTEGER; 
+    currentchar: char;
+BEGIN
+    sentence:='';
+    sentenceLength := 0;
+    wordcount := 0;
+    vowelcount := 0;
+    writeIn('Enter a sentence(ending with a period): ');
+    readIn(sentence);
+    for currentchar in sentence do BEGIN
+    sentenceLength := sentence + 1;
+ if currentchar =' 'then
+
+ begin
+  wordcount := wordcount + 1;
+
+ end
+
+ else if (currentchar = 'a')or (currentchar = 'e')or (currentchar = 'i') or 
+       (currentchar='o')or (currentchar='u')or
+       (currentchar = 'A')or (currentchar = 'E')or (currentchar = 'I') or
+        (currentchar='O')or (currentchar='U')then
+  begin 
+     vowelcount := vowelcount +1;
+     end;
+    end;
+    writeIn('sentence Length: ', sentenceLength);
+    writeIn('Number of words: ', wordcount +1);
+    writeIn('Number of vowels: ',vowelcount);
+    end.
+    
+END
+
+
+
+
